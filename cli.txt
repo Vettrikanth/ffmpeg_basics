@@ -1,0 +1,9 @@
+ffmpeg -i Sample720p.mp4 -hide_banner
+ffmpeg -i Sample720p.mp4 Sample720p.mkv
+ffmpeg -i 4k.mp4 -s 640*480 480p.mp4
+ffmpeg -i Sampe720p.mp4 -r 1 image%3d.png
+ffmpeg -i Sample720p.mp4 -b:a 128k -b:v 2000k bitrate.mp4
+ffmpeg -i Sample720p.mp4 -filter:a "volume=3" high_volume.mp4
+ffmpeg -i Sample720p.mp4 -filter:a "pan=stereo|c0=FL|c1=0" left.mp4
+ffmpeg -i Sample720p.mp4 -filter:v "crop=w=640:h=480:x=100:y=200" crop.mp4
+ffmpeg -i Sample720p.mp4 -filter:v "rotate=180*PI/180" rotate_180.mp4
